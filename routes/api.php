@@ -17,5 +17,5 @@ Route::get('/test', function (Request $request) {
     return 'ciao';
 });
 Route::get('/test2', function (Request $request) {
-    return 'ciao2';
+    return response()->json('ciao2');
 });

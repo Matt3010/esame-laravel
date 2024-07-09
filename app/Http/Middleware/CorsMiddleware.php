@@ -10,6 +10,7 @@ class CorsMiddleware
     {
         $allowedOrigins = [
             'https://esame-angular.onrender.com',
+            'https://esame-laravel.onrender.com',
             'http://localhost:4200',
         ];
 

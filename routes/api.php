@@ -16,3 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/test', function (Request $request) {
     return 'ciao';
 });
+Route::get('/test2', function (Request $request) {
+    return 'ciao2';
+});

@@ -13,9 +13,7 @@ use Illuminate\Support\Facades\Route;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-Route::get('/test', function (Request $request) {
-    return 'ciao';
-});
-Route::get('/test2', function (Request $request) {
-    return response()->json('ciao2');
+
+Route::prefix('tests')->group(function () {
+    Route::get('/', [\App\Http\Controllers\TestController::class, 'getAllTests']);
 });

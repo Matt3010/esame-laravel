@@ -16,7 +16,7 @@ class OffertaDiLavoroController extends Controller
             if ($maxRichieste = $request->input('maxRichieste')) {
                 $offerte = OffertaDiLavoro::orderBy('dataInserimento', 'desc')->take($maxRichieste)->get();
             } else {
-                $offerte = OffertaDiLavoro::all();
+                $offerte = OffertaDiLavoro::orderBy('dataInserimento', 'desc')->get();
             }
             return response()->json(['status' => 'OK', 'data' => $offerte], 200);
         } catch (\Exception $e) {

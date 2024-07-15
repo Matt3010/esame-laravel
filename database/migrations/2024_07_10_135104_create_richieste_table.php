@@ -14,7 +14,7 @@ return new class extends Migration {
             $table->id('RichiestaID');
             $table->string('CognomeNomeRichiedente');
             $table->timestamp('DataInserimentoRichiesta');
-            $table->decimal('Importo', 10, 8);
+            $table->float('Importo');
             $table->integer('NumeroRate');
             $table->timestamps();
         });

@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class ListaRichiesteFinanziamentoFilteredByCognomeNomeRichiedente extends FormRequest
+class Modifica extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -22,7 +22,11 @@ class ListaRichiesteFinanziamentoFilteredByCognomeNomeRichiedente extends FormRe
     public function rules(): array
     {
         return [
-            'CognomeNomeRichiedente' => 'string'
+            'CognomeNomeRichiedente' => 'required|string',
+            'DataInserimentoRichiesta' => 'required|date',
+            'Importo' => 'required',
+            'NumeroRate' => 'required|integer|in:6,12,18,24,48,60',
+           // 'richiestaID' => 'required|integer'
         ];
     }
 }
